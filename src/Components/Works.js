@@ -12,31 +12,39 @@ const Works = ({ item }) => {
       itemId={item.id}
       className="grid-item"
     >
-      <div className="scholarly-card">
-        <div className="card-image">
-          <img src={item.imgsrc} alt={item.name} loading="lazy" />
-          <div className="category-tag">{item.category}</div>
-        </div>
-        
-        <div className="card-info">
-          <h3 className="article-title">{item.fullTitle || item.name}</h3>
-          
-          <div className="meta-info">
-            <span className="journal">{item.journal}</span>
-            <span className="separator">•</span>
-            <span className="year">{item.year}</span>
+      <a 
+        href={item.href} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="card-link-wrapper"
+        style={{ display: 'block', textDecoration: 'none', color: 'inherit', width: '100%', height: '100%' }}
+      >
+        <div className="scholarly-card">
+          <div className="card-image">
+            <img src={item.imgsrc} alt={item.name} loading="lazy" />
+            <div className="category-tag">{item.category}</div>
           </div>
           
-          <p className="abstract">{item.abstract}</p>
-          
-          <div className="card-footer">
-            <a href={item.href} className="view-btn" target="_blank" rel="noopener noreferrer">
-              <MdArticle className="btn-icon" />
-              View Full Paper
-            </a>
+          <div className="card-info">
+            <h3 className="article-title">{item.fullTitle || item.name}</h3>
+            
+            <div className="meta-info">
+              <span className="journal">{item.journal}</span>
+              <span className="separator">•</span>
+              <span className="year">{item.year}</span>
+            </div>
+            
+            <p className="abstract">{item.abstract}</p>
+            
+            <div className="card-footer">
+              <div className="view-btn">
+                <MdArticle className="btn-icon" />
+                View Full Paper
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
     </CardWrapper>
   );
 };

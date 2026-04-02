@@ -3,6 +3,12 @@ import { GiMaterialsScience, GiChemicalDrop, GiSettingsKnobs, GiMicroscope, GiDn
 import { SiPython, SiLatex, SiMicrosoftoffice, SiPytorch, SiTensorflow } from 'react-icons/si';
 import { VscGraph } from 'react-icons/vsc';
 
+/** 
+ * MAIN LAYOUT TOGGLE
+ * Options: "academic", "industrial", "modern_lab"
+ */
+export const SELECTED_LAYOUT = "academic";
+
 export const SkillSet = [
     {
         id: "1",

@@ -97,8 +97,8 @@ export default Portfolio;
 const Wrapper = styled.section`
 
   .card-wrap {
-    overflow: hidden;
-    padding-bottom: 30px;
+    overflow: auto;
+    padding-bottom: 50px;
   }
   .content {
     margin: 0px 0px 10px;
@@ -128,7 +128,6 @@ const Wrapper = styled.section`
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-gap: 2.5rem;
     margin: 0;
-    overflow: visible;
 
     .grid-item {
       position: relative;
